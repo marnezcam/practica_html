@@ -1,0 +1,77 @@
+:root {
+  --blanco: #fff;
+  --oscuro: #212121;
+  --primario: #ffc107;
+  --secundario: #0097a7;
+  --gris: #757575;
+
+  /* custom properties son propiedades que se pueden definir desde el principio */
+}
+
+html {
+  font-size: 62.5%;
+}
+/* Selector de elemento */
+body {
+  font-size: 16px;
+  font-family: "Krub", sans-serif;
+}
+
+.titulo {
+  text-align: center;
+  font-size: 3.8rem;
+  font-weight: 400;
+}
+
+.titulo span {
+  font-size: 2rem;
+}
+
+.contenedor {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.nav-bg {
+  background-color: var(--secundario);
+}
+.navegacion-principal {
+  display: flex; /*Aqui se usara flexbox */
+  flex-direction: column; /*Ordena Horizontal o verticalmente por default esta en row(horizontalmente)*/
+  /* Se usa en lugar de aling-items cuando flex-direction es column */
+}
+
+.navegacion-principal a {
+  display: block;
+  text-align: center;
+  color: var(--blanco);
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.navegacion-principal a:hover {
+  background-color: var(--primario);
+  color: var(--oscuro);
+}
+
+@media (min-width: 480px) {
+  .navegacion-principal a {
+  }
+}
+
+@media (min-width: 768px) {
+  .navegacion-principal {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media screen {
+}
+/* Combinación de decendentes
+Selecciona a los elementos hijos cuyos 
+padres sean hijos de una clase */
+
+/* Recuerda si un elemento tiene un selector mas especifico no importa
+mucho donde haya sido declarado, CSS decidirá por su especificidad */
