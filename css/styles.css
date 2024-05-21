@@ -55,6 +55,13 @@ body {
   color: var(--oscuro);
 }
 
+.hero {
+  background-image: url(../img/hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; /*Toma todo el ancho de la pantalla*/
+  height: 450px;
+}
+
 @media (min-width: 480px) {
   .navegacion-principal a {
   }
