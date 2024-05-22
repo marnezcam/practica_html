@@ -8,18 +8,41 @@
   /* custom properties son propiedades que se pueden definir desde el principio */
 }
 
+/* ETIQUETAS box-sizing y befor, afters nos ayudan a evitar que las cajas o boxes en HTML no se redimencionen al momento de agregar padings y margins  */
+
 html {
   font-size: 62.5%;
+  box-sizing: border-box;
 }
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 /* Selector de elemento */
 body {
   font-size: 16px;
   font-family: "Krub", sans-serif;
 }
 
-.titulo {
-  text-align: center;
+h1 {
   font-size: 3.8rem;
+}
+
+h2 {
+  font-size: 2.8rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
   font-weight: 400;
 }
 
@@ -58,8 +81,29 @@ body {
 .hero {
   background-image: url(../img/hero.jpg);
   background-repeat: no-repeat;
-  background-size: cover; /*Toma todo el ancho de la pantalla*/
+  background-size: cover; /*La imagenToma todo el ancho de la pantalla*/
   height: 450px;
+  position: relative; /*Para que pueda contener contenedores relativos*/
+}
+
+.contenido-hero {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+  color: var(--blanco);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contenido-hero a {
+  color: var(--blanco);
+  text-decoration: none;
+  background-color: var(--primario);
+  padding: 5px;
 }
 
 @media (min-width: 480px) {
@@ -71,10 +115,16 @@ body {
   .navegacion-principal {
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
   }
 }
 
 @media screen {
+}
+
+.ubicacion {
+  display: flex;
+  align-items: flex-end;
 }
 /* Combinación de decendentes
 Selecciona a los elementos hijos cuyos 
