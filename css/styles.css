@@ -36,6 +36,21 @@ body {
   );
 }
 
+.boton {
+  color: var(--blanco);
+  text-decoration: none;
+  background-color: var(--secundario);
+  padding: 1rem 3rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  text-align: center;
+  width: 90%;
+  margin-top: 2rem;
+  border: none;
+}
+
 @media (min-width: 768px) {
   .boton a {
     width: auto;
@@ -70,9 +85,22 @@ h3 {
   font-weight: 400;
 }
 
-/*titulos **/
+/*Titulos **/
 .titulo span {
   font-size: 2rem;
+}
+
+/* Utilidades */
+.w-100 {
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+}
+
+.alinear-derecha {
+  justify-content: flex-end;
 }
 
 /*Navegacion Principal */
@@ -137,17 +165,14 @@ h3 {
   margin: 0 auto;
 }
 
-.boton {
-  color: var(--blanco);
-  text-decoration: none;
-  background-color: var(--secundario);
-  padding: 1rem 3rem;
-  font-size: 2rem;
-  text-transform: uppercase;
-  font-weight: 700;
-  border-radius: 0.5rem;
-  text-align: center;
-  width: auto;
+.boton:hover {
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .boton {
+    width: auto;
+  }
 }
 
 .contenido-hero .ubicacion {
@@ -167,6 +192,78 @@ h3 {
     /*   Otra forma de definir columnas en grid, lo que significa 3 columnas 
          grid-template-columns: repeat(3, 1fr);                                */
   }
+}
+
+.servicio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.servicio p {
+  text-align: center;
+  line-height: 2;
+}
+
+.servicio h3 {
+  color: var(--secundario);
+  font-weight: 700;
+}
+
+.servicio .iconos {
+  height: 15rem;
+  width: 15rem;
+  background-color: var(--primario);
+  border-radius: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.formulario {
+  background-color: var(--gris);
+  width: min(
+    60rem,
+    100%
+  ); /*Usa el 60rems de ancho pero si el espacio disponible es menor usara 100% */
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.formulario fieldset {
+  border: none;
+}
+
+.formulario legend {
+  width: 100%;
+  text-align: center;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--primario);
+}
+
+.contenedor-campos {
+}
+
+.campo {
+  margin-bottom: 1rem;
+}
+
+.campo label {
+  color: var(--blanco);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.input-text {
+  width: 100%;
+  border: none;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
 }
 
 /* Combinación de decendentes
